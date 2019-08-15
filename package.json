@@ -1,0 +1,45 @@
+{
+  "name": "react-assignments",
+  "version": "1.0.0",
+  "description": "Just some minor assignments regarding to React",
+  "main": "index.js",
+  "author": "Hao Tran",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "rm:file": "rimraf assignment.zip",
+    "gen:test": "npm run rm:file && zip -r assignment.zip . -x \\*node_modules\\* -x \\*.git\\* --exclude '*index-answer.tsx'"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.23",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@types/jest": "^24.0.16",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest",
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)?$"
+  }
+}
